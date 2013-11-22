@@ -1581,8 +1581,8 @@ local myFocus = UnitName("focus")
 					else
 					local bubblealerttext = gsub(sadb.bubblealerttext, "(#spell#)", GetSpellLink(spellID))
 					SendChatMessage(gsub(sadb.bubblealerttext, "(#enemy#)", sourceName), sadb.chatgroup, nil, nil)
-					end	
-				end
+				end	
+			end
 		elseif (spellID == 42292) then--FIXME - no trinket combat log event??
 			if sadb.trinketalert and not sadb.chatalerts and (not sadb.caonlyTF or sourceuid.target or sourceuid.focus) then
 				local trinketalerttext = gsub(sadb.trinketalerttext, "(#spell#)", GetSpellLink(spellID))
@@ -1601,7 +1601,7 @@ local myFocus = UnitName("focus")
 			end
 		elseif spellID ~= 6770 and spellID ~= 11297 and spellID ~= 2094 and (not sadb.sonlyTF or sourceuid.target or sourceuid.focus) then	--to prevent double spam in party 
 			self:PlaySpell (self.spellList.castSuccess,spellID)
-		end	
+		end
 	elseif (event == "SPELL_INTERRUPT" and desttype[COMBATLOG_FILTER_HOSTILE_PLAYERS] and not sadb.interrupt) then 
 		self:PlaySpell (self.spellList.friendlyInterrupt,spellID)
 	end

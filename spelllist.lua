@@ -151,9 +151,7 @@ function SoundAlerter:GetSpellList ()
 			[23989] = "readiness", 
 			[19386] = "wyvernSting", 
 			[34490] = "silencingshot",
-			[14311] = "freezingtrap", --double check
-			[1499] = "freezingtrap", --double check
-			[14310] = "freezingtrap", --double check
+			[27753] = "freezingtrap", --double check
 			[32419] = "freezingtrap", --freezing trap effect
 			[13810] = "frosttrap", --frost trap
 			[13809] = "frosttrap", --frost trap aura
